@@ -1,0 +1,109 @@
+********************************************************************************
+*                           mlx-satAfinal_2.mlxtran                            *
+*                           May 19, 2026 at 16:09:18                           *
+*                           Monolix version : 2024R1                           *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------     se_lin     rse(%)   P2.5_lin  P97.5_lin
+Dp_pop    :                            887        310         35        470   1.67e+03
+g_pop     :                           0.53
+psi_pop   :                           4.86          2       41.1       2.35       10.1
+Ax_pop    :                           12.9       4.31       33.5       7.01       23.7
+hA_pop    :                           98.2       34.9       35.5       51.7        187
+
+Standard Deviation of the Random Effects -
+omega_Dp  :                           1.44
+omega_psi :                           1.49
+omega_Ax  :                          0.929
+
+Error Model Parameters -------------------
+b         :                            0.1
+
+Elapsed time (seconds):  1.2e+02
+CPU time     (seconds):  4.1e+02
+Exploratory phase iterations:      425 (Autostop)
+Smoothing phase iterations:        125 (Autostop)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Distribution ------------
+                min            Q1        median            Q3           max  shrinkage(%)
+Dp  :          15.1           495      1.38e+03      2.28e+03       2.3e+04         -31.7
+g   :          0.53          0.53          0.53          0.53          0.53           nan
+psi :         0.706          3.42          4.98          14.1           231          22.1
+Ax  :          3.14          6.16          18.7          33.2          60.9          5.68
+hA  :          98.2          98.2          98.2          98.2          98.2           nan
+
+Elapsed time (seconds):       50
+CPU time     (seconds):  1.2e+02
+Iterations:      203 (Autostop)
+
+ -------------------------------------------------------------------------------
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+                min            Q1        median            Q3           max  shrinkage(%)
+Dp  :            15           487      1.31e+03      2.29e+03       2.3e+04         -31.8
+g   :          0.53          0.53          0.53          0.53          0.53           nan
+psi :          0.71          3.42           4.6          6.46           236          24.4
+Ax  :           3.5          6.39          12.9          29.1            37            20
+hA  :          98.2          98.2          98.2          98.2          98.2           nan
+
+Elapsed time (seconds):      0.5
+CPU time     (seconds):        1
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE FISHER INFORMATION MATRIX ____________________________________
+
+
+Estimation of the Fisher information matrix by Linearization -------------------
+
+Correlation Matrix :
+ Dp_pop         1
+psi_pop 0.0022543         1
+ Ax_pop-0.0025806  0.004148         1
+ hA_pop0.00026826  -0.16068 -0.031534         1
+
+                               min       max   max/min
+Eigen values           :      0.84       1.2       1.4
+
+Elapsed time (seconds):     0.12
+CPU time     (seconds):        0
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                           (lin)
+-2 x log-likelihood                       (OFV) :        6500.68
+Akaike Information Criteria               (AIC) :        6508.68
+Corrected Bayesian Information Criteria  (BICc) :        6523.14
+Bayesian Information Criteria             (BIC) :        6512.66
+
+Elapsed time                          (seconds) :           0.04
+CPU time                              (seconds) :           0.00
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 20
+Number of observations (HBsAg): 275
+Number of doses: 0
+

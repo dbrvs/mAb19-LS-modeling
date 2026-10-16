@@ -1,0 +1,4 @@
+residuals,statistics,p-value,test
+IWRES_HBsAg,-2.73872,0.00616781,Symmetry
+PWRES_HBsAg,-4.4922,7.0492e-06,Symmetry
+NPDE_HBsAg,-1.086,0.27748,Symmetry

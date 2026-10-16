@@ -1,0 +1,6 @@
+eta,covariate,statistics,p-value,test
+eta_Dp,dose,0.319677,0.860389,Anova
+eta_g,dose,1.50555,0.25044,Anova
+eta_psi,dose,0.439285,0.778349,Anova
+eta_Ax,dose,0.784687,0.552641,Anova
+eta_Sx,dose,1.00701,0.434648,Anova

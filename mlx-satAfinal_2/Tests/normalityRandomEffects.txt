@@ -1,0 +1,4 @@
+eta,statistics,p-value
+eta_Dp,0.944103,0.374029
+eta_psi,0.876633,0.0121192
+eta_Ax,0.93722,0.301441

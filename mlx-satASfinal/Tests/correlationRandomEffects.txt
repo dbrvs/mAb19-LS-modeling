@@ -1,0 +1,11 @@
+eta1,eta2,coeff,statistics,p-value
+eta_Dp,eta_g,0,1.51126,0.147175
+eta_Dp,eta_psi,0,4.03776,0.000702881
+eta_Dp,eta_Ax,0,-1.76861,0.0930122
+eta_Dp,eta_Sx,0,-1.03587,0.31327
+eta_g,eta_psi,0,0.0464186,0.963461
+eta_g,eta_Ax,0,1.34125,0.195653
+eta_g,eta_Sx,0,-0.229841,0.820671
+eta_psi,eta_Ax,0,-2.19235,0.0410082
+eta_psi,eta_Sx,0,0.299249,0.767999
+eta_Ax,eta_Sx,0,-1.38104,0.183296

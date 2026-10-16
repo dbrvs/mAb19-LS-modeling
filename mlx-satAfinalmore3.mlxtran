@@ -1,0 +1,77 @@
+<DATAFILE>
+
+[FILEINFO]
+file={path='HBsAg_mAb19_long.xlsx', sheet='Sheet1'}
+delimiter = tab
+header={participant, time, HBsAg, mAb19, dose, mAb19_cens}
+
+[CONTENT]
+participant = {use=identifier}
+time = {use=time}
+HBsAg = {use=observation, type=continuous}
+mAb19 = {use=regressor}
+dose = {use=covariate, type=categorical}
+
+[SETTINGS]
+regressorType = linearInterpolation
+
+<MODEL>
+
+[COVARIATE]
+input = dose
+
+dose = {type=categorical, categories={'0', '1', '10', '3', '30'}}
+
+[INDIVIDUAL]
+input = {Dp_pop, omega_Dp, psi_pop, omega_psi, g_pop, omega_g, Ax_pop, omega_Ax, hA_pop, corr_g_Dp}
+
+DEFINITION:
+Dp = {distribution=logNormal, typical=Dp_pop, sd=omega_Dp}
+psi = {distribution=logNormal, typical=psi_pop, sd=omega_psi}
+g = {distribution=logitNormal, min=0.3, max=0.8, typical=g_pop, sd=omega_g}
+Ax = {distribution=logNormal, typical=Ax_pop, sd=omega_Ax}
+hA = {distribution=logNormal, typical=hA_pop, no-variability}
+correlation = {level=id, r(g, Dp)=corr_g_Dp}
+
+[LONGITUDINAL]
+input = {b}
+
+file = 'model-VDsaturateA.txt'
+
+DEFINITION:
+HBsAg = {distribution=normal, prediction=S, errorModel=proportional(b)}
+
+<FIT>
+data = 'HBsAg'
+model = HBsAg
+
+<PARAMETER>
+Ax_pop = {value=14.889432, method=MLE}
+Dp_pop = {value=1445.6555, method=MLE}
+b = {value=0.1, method=FIXED}
+c = {value=1, method=FIXED}
+corr_g_Dp = {value=0.9870988000000001, method=MLE}
+g_pop = {value=0.53, method=FIXED}
+hA_pop = {value=10, method=FIXED}
+omega_Ax = {value=1, method=MLE}
+omega_Dp = {value=0.5, method=MLE}
+omega_g = {value=0.5, method=FIXED}
+omega_psi = {value=1, method=MLE}
+psi_pop = {value=4.7914122, method=MLE}
+
+<MONOLIX>
+
+[TASKS]
+populationParameters()
+individualParameters(method = {conditionalMean, conditionalMode })
+fim(method = Linearization)
+logLikelihood(method = Linearization)
+
+[PLOTS]
+run = true
+plots = {indfits = {selected = true}, parameterdistribution = {selected = true}, obspred = {selected = true}, covariancemodeldiagnosis = {selected = true}, covariatemodeldiagnosis = {selected = true}, vpc = {selected = true}, residualsscatter = {selected = true}, residualsdistribution = {selected = true}, randomeffects = {selected = true}, saemresults = {selected = true}}
+
+[SETTINGS]
+GLOBAL:
+exportpath = 'mlx-satAfinalmore3'
+

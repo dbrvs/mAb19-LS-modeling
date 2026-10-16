@@ -1,0 +1,4 @@
+residuals,statistics,p-value,test
+IWRES_HBsAg,0.972711,4.3225e-06,Shapiro-Wilk
+PWRES_HBsAg,0.688333,<2.2e-16,Shapiro-Wilk
+NPDE_HBsAg,0.960272,7.45423e-07,Shapiro-Wilk

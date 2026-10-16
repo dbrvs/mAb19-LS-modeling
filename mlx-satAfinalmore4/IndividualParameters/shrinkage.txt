@@ -1,0 +1,6 @@
+parameters,shrinkage_mode,shrinkage_mean,shrinkage_condDist
+Dp,1.05239,0.0160122,0.818973
+g,33.681,14.6073,-2.93758
+psi,9.56887,10.605,3.83088
+Ax,15.4499,8.72335,-1.89373
+hA,nan,nan,nan
